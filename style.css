@@ -40,6 +40,18 @@
 .display-flex {
   display: flex;
 }
+main {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+main > section {
+  margin-top: 130px;
+}
+.section-title {
+  font-size: 3rem;
+  color: #727272;
+  margin-bottom: 24px;
+}
 /* Header Styles */
 
 /* Navbar Related Styles */
@@ -90,11 +102,105 @@
   border-radius: 8px;
   margin-bottom: 45px;
 }
+/* team and feature related styles */
+.team-container {
+  align-items: center;
+}
+.team-images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+.team-images img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+.features-content {
+  margin-left: 100px;
+  max-width: 530px;
+}
 
+.quick-list {
+  font-weight: 400;
+}
+.of-our {
+  color: #131313;
+  font-weight: 700;
+}
+.feature {
+  color: #ff900e;
+  font-weight: 700;
+}
+.feature-description {
+  font-size: 1rem;
+  line-height: 26px;
+  color: #727272;
+  margin-bottom: 32px;
+}
+/* Facts Section Started */
+.facts-content {
+  max-width: 542px;
+  margin-bottom: 70px;
+}
+.facts-title {
+  font-weight: 700;
+  color: #131313;
+}
+.facts-description {
+  font-size: 1rem;
+  color: #727272;
+  line-height: 26px;
+}
+.facts-cards {
+  display: flex;
+  justify-content: center;
+  gap: 125px;
+  margin: 0 auto;
+}
+.facts-single-card {
+  max-width: 170px;
+  padding: 45px;
+  border: 1px solid tomato;
+  text-align: center;
+  border-radius: 8px;
+}
+.facts-single-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.facts-single-card h6 {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+footer {
+  max-width: 1140px;
+  background-color: #fff4e7;
+  text-align: center;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 8px;
+  margin-bottom: 100px;
+  color: #727272;
+}
 /* Responsive Media Query */
 @media screen and (max-width: 576px) {
   .navbar,
-  .nav-links {
+  .nav-links,
+  .team-container {
+    flex-direction: column;
+  }
+  main > section {
+    margin-top: 30px;
+  }
+  .team-images {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* Medium Size Device */
+@media screen and (min-width: 576px) and (max-width: 992px) {
+  .team-container {
     flex-direction: column;
   }
 }
